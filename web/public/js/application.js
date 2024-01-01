@@ -1,10 +1,10 @@
 function extractFormData() {
     var formData = {
-        name: $('#name').val(),
+        name: $('#name').val().toLocaleUpperCase(),
         city: $('#city').val(),
         age: $('#age').val()
     };
-    console.log(formData);
+    // console.log(formData);
     return formData
 }
 
