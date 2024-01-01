@@ -1,0 +1,49 @@
+.about {
+    width: 100%;
+}
+
+.about form {
+    display: flex;
+    flex-flow: column;
+    padding: 0 40px;
+}
+
+input {
+    height: 40px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+form :nth-child(2) {
+    margin: 15px 0;
+}
+
+.loading-buttons {
+    button {
+        i.fa-file-word {
+            padding-right: .5em;
+        }
+    }
+}
+
+.about .error {
+    padding: 0 40px;
+    /*display: flex;*/
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.about .error i{ 
+    font-size: 80px;
+    padding: 10px 0;
+    color: rgb(238, 74, 45);
+}
+
+.about .error .smaller p {
+    margin-bottom: 4px;
+    font-size: 15px;
+    color: blck;
+}

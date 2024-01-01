@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    color: rgb(48, 48, 48);
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 195, 195);
+}
+.content {
+    width: 500px;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    font-size: 18px;
+}
+.about, .submit, h1 {
+    padding-top: 18px;
+}
+.pic {
+    height: 250px;
+    width: 250px;
+    background-color: gray;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pic img {
+    position: relative;
+    right: 16px;
+    top: 9px;
+    height: 400px;
+}
+
+.submit button {
+    padding: 9px;
+    font-size: 17px;
+    min-width: 120px;
+    border-radius: 9px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.about p {
+    text-align: justify;
+}
