@@ -28,22 +28,17 @@ form :nth-child(2) {
 }
 
 .about .error {
-    padding: 0 40px;
-    /*display: flex;*/
+    padding-top: 20px;
+    display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    display: none;
-}
-
-.about .error i{ 
-    font-size: 80px;
-    padding: 10px 0;
-    color: rgb(238, 74, 45);
+    /*display: none;*/
 }
 
 .about .error .smaller p {
     margin-bottom: 4px;
     font-size: 15px;
     color: blck;
+    color: rgb(238, 74, 45);
 }

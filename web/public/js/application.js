@@ -231,13 +231,32 @@ function hide(selector) {
 }
 
 let navigator = true
-window.addEventListener('online', () => {navigator = true});
-window.addEventListener('offline', () => {navigator = false});
+window.addEventListener('online', () => { navigator = true });
+window.addEventListener('offline', () => { navigator = false });
 
 $('#load').on('click', async function () {
     var $this = $(this);
 
     const formData = extractFormData()
+
+    let err = []
+    Object.keys(formData).forEach(key => {
+        let value = formData[key]
+        if (key == 'age') {
+            if (value == "" || value.length < 2) {
+                err.push(`${key} fields cannot be empty or less than 2 characters`)
+            }
+        } else {
+            if (value == "" || value.length <= 2) {
+                err.push(`${key} fields cannot be empty or less than 3 characters`)
+            }
+        }
+    });
+    $('.smaller p').html(err.join('<br>'))
+    if ($('.smaller p').html() != "") {
+        return
+    }
+    
     const link = await vbs(formData)
 
     $this.button('loading');
@@ -248,7 +267,7 @@ $('#load').on('click', async function () {
         show(".fm");
         hide(".error");
     }, 5000);
-    
+
     /*console.log(navigator)
     if (!navigator) {
         link[0].click();
